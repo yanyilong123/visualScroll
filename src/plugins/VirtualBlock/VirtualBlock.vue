@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       //上下缓冲区数量
-      bufferSize: 5,
+      bufferSize: 1,
       //屏幕容积数量
       screenNum: 5,
       //可视区域的开始位置索引
