@@ -5,7 +5,8 @@
       <!-- 列表总高 -->
         <ul :style="{height: scrollBarHeight + 'px'}">
       <!-- 列表偏移量 -->
-          <Item :style="{'transform': `translate3d(0,${scrollTop}px,0)`}" v-for="item in visibleList" :item="item" :index="item.index" :key="item.brandId" @update-height="updateItemHeight"/>
+          <Item :style="{'transform': `translate3d(0,${scrollTop}px,0)`}" v-for="item in visibleList"
+           :item="item" :index="item.index" :key="item.brandId" @update-height="updateItemHeight"/>
         </ul>
       </div>
     </div>
@@ -81,8 +82,7 @@ export default {
         brandId: i + 1,
         name: `第${i + 1}项`,
         height: Math.floor(Math.max(Math.random() * 10, 5)) * 10
-      }));
-	  console.log(newDataList);
+      }))
       return newDataList;
     },
     // 获取渲染项起始索引
